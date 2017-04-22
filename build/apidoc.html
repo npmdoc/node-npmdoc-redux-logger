@@ -1,0 +1,871 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/theaqua/redux-logger#readme"
+
+    >redux-logger (v3.0.1)</a>
+</h1>
+<h4>Logger for Redux</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-logger">module redux-logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.createLogger">
+            function <span class="apidocSignatureSpan">redux-logger.</span>createLogger
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.default">
+            function <span class="apidocSignatureSpan">redux-logger.</span>default
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.logger">
+            function <span class="apidocSignatureSpan">redux-logger.</span>logger
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-logger.</span>core</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-logger.</span>defaults</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-logger.</span>defaults.colors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-logger.</span>helpers</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-logger.core">module redux-logger.core</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.core.printBuffer">
+            function <span class="apidocSignatureSpan">redux-logger.core.</span>printBuffer
+            <span class="apidocSignatureSpan">(buffer, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-logger.defaults">module redux-logger.defaults</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-logger.defaults.</span>diff</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-logger.defaults.</span>duration</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-logger.defaults.</span>logErrors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-logger.defaults.</span>timestamp</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.actionTransformer">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.</span>actionTransformer
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.errorTransformer">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.</span>errorTransformer
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.stateTransformer">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.</span>stateTransformer
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-logger.defaults.</span>colors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-logger.defaults.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">redux-logger.defaults.</span>level</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-logger.defaults.colors">module redux-logger.defaults.colors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.colors.action">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>action
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.colors.error">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.colors.nextState">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>nextState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.colors.prevState">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>prevState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.defaults.colors.title">
+            function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>title
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-logger.helpers">module redux-logger.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.helpers.formatTime">
+            function <span class="apidocSignatureSpan">redux-logger.helpers.</span>formatTime
+            <span class="apidocSignatureSpan">(time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.helpers.pad">
+            function <span class="apidocSignatureSpan">redux-logger.helpers.</span>pad
+            <span class="apidocSignatureSpan">(num, maxLength)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.helpers.repeat">
+            function <span class="apidocSignatureSpan">redux-logger.helpers.</span>repeat
+            <span class="apidocSignatureSpan">(str, times)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-logger.helpers.timer">
+            function <span class="apidocSignatureSpan">redux-logger.helpers.</span>timer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-logger" id="apidoc.module.redux-logger">module redux-logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.createLogger" id="apidoc.element.redux-logger.createLogger">
+        function <span class="apidocSignatureSpan">redux-logger.</span>createLogger
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createLogger() {
+  var options = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {};
+
+  var loggerOptions = _extends({}, _defaults2.default, options);
+
+  var logger = loggerOptions.logger,
+      stateTransformer = loggerOptions.stateTransformer,
+      errorTransformer = loggerOptions.errorTransformer,
+      predicate = loggerOptions.predicate,
+      logErrors = loggerOptions.logErrors,
+      diffPredicate = loggerOptions.diffPredicate;
+
+  // Return if &#x27;console&#x27; object is not defined
+
+  if (typeof logger === &#x27;undefined&#x27;) {
+    return function () {
+      return function (next) {
+        return function (action) {
+          return next(action);
+        };
+      };
+    };
+  }
+
+  // Detect if &#x27;createLogger&#x27; was passed directly to &#x27;applyMiddleware&#x27;.
+  if (options.getState &#x26;&#x26; options.dispatch) {
+    // eslint-disable-next-line no-console
+    console.error(&#x27;[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default
+ options\nimport { logger } from \&#x27;redux-logger\&#x27;\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from \&#x27;redux-logger\&#x27;\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n&#x27;);
+
+    return function () {
+      return function (next) {
+        return function (action) {
+          return next(action);
+        };
+      };
+    };
+  }
+
+  var logBuffer = [];
+
+  return function (_ref) {
+    var getState = _ref.getState;
+    return function (next) {
+      return function (action) {
+        // Exit early if predicate function returns &#x27;false&#x27;
+        if (typeof predicate === &#x27;function&#x27; &#x26;&#x26; !predicate(getState, action)) {
+          return next(action);
+        }
+
+        var logEntry = {};
+
+        logBuffer.push(logEntry);
+
+        logEntry.started = _helpers.timer.now();
+        logEntry.startedTime = new Date();
+        logEntry.prevState = stateTransformer(getState());
+        logEntry.action = action;
+
+        var returnedValue = void 0;
+        if (logErrors) {
+          try {
+            returnedValue = next(action);
+          } catch (e) {
+            logEntry.error = errorTransformer(e);
+          }
+        } else {
+          returnedValue = next(action);
+        }
+
+        logEntry.took = _helpers.timer.now() - logEntry.started;
+        logEntry.nextState = stateTransformer(getState());
+
+        var diff = loggerOptions.diff &#x26;&#x26; typeof diffPredicate === &#x27;function&#x27; ? diffPredicate(getState, action) : loggerOptions.diff
+;
+
+        (0, _core.printBuffer)(logBuffer, _extends({}, loggerOptions, { diff: diff }));
+        logBuffer.length = 0;
+
+        if (logEntry.error) throw logEntry.error;
+        return returnedValue;
+      };
+    };
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.default" id="apidoc.element.redux-logger.default">
+        function <span class="apidocSignatureSpan">redux-logger.</span>default
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defaultLogger() {
+  var _ref2 = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {},
+      dispatch = _ref2.dispatch,
+      getState = _ref2.getState;
+
+  if (typeof dispatch === &#x27;function&#x27; || typeof getState === &#x27;function&#x27;) {
+    return createLogger()({ dispatch: dispatch, getState: getState });
+  } else {
+    // eslint-disable-next-line no-console
+    console.error(&#x27;\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with
+ default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from \&#x27;redux-logger\&#x27;\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from \&#x27;redux-logger\&#x27;\n&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.logger" id="apidoc.element.redux-logger.logger">
+        function <span class="apidocSignatureSpan">redux-logger.</span>logger
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defaultLogger() {
+  var _ref2 = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {},
+      dispatch = _ref2.dispatch,
+      getState = _ref2.getState;
+
+  if (typeof dispatch === &#x27;function&#x27; || typeof getState === &#x27;function&#x27;) {
+    return createLogger()({ dispatch: dispatch, getState: getState });
+  } else {
+    // eslint-disable-next-line no-console
+    console.error(&#x27;\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with
+ default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from \&#x27;redux-logger\&#x27;\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from \&#x27;redux-logger\&#x27;\n&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-logger.core" id="apidoc.module.redux-logger.core">module redux-logger.core</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.core.printBuffer" id="apidoc.element.redux-logger.core.printBuffer">
+        function <span class="apidocSignatureSpan">redux-logger.core.</span>printBuffer
+        <span class="apidocSignatureSpan">(buffer, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function printBuffer(buffer, options) {
+  var logger = options.logger,
+      actionTransformer = options.actionTransformer,
+      _options$titleFormatt = options.titleFormatter,
+      titleFormatter = _options$titleFormatt === undefined ? defaultTitleFormatter(options) : _options$titleFormatt,
+      collapsed = options.collapsed,
+      colors = options.colors,
+      level = options.level,
+      diff = options.diff;
+
+
+  var isUsingDefaultFormatter = typeof options.titleFormatter === &#x27;undefined&#x27;;
+
+  buffer.forEach(function (logEntry, key) {
+    var started = logEntry.started,
+        startedTime = logEntry.startedTime,
+        action = logEntry.action,
+        prevState = logEntry.prevState,
+        error = logEntry.error;
+    var took = logEntry.took,
+        nextState = logEntry.nextState;
+
+    var nextEntry = buffer[key + 1];
+
+    if (nextEntry) {
+      nextState = nextEntry.prevState;
+      took = nextEntry.started - started;
+    }
+
+    // Message
+    var formattedAction = actionTransformer(action);
+    var isCollapsed = typeof collapsed === &#x27;function&#x27; ? collapsed(function () {
+      return nextState;
+    }, action, logEntry) : collapsed;
+
+    var formattedTime = (0, _helpers.formatTime)(startedTime);
+    var titleCSS = colors.title ? &#x27;color: &#x27; + colors.title(formattedAction) + &#x27;;&#x27; : &#x27;&#x27;;
+    var headerCSS = [&#x27;color: gray; font-weight: lighter;&#x27;];
+    headerCSS.push(titleCSS);
+    if (options.timestamp) headerCSS.push(&#x27;color: gray; font-weight: lighter;&#x27;);
+    if (options.duration) headerCSS.push(&#x27;color: gray; font-weight: lighter;&#x27;);
+    var title = titleFormatter(formattedAction, formattedTime, took);
+
+    // Render
+    try {
+      if (isCollapsed) {
+        if (colors.title &#x26;&#x26; isUsingDefaultFormatter) logger.groupCollapsed.apply(logger, [&#x27;%c &#x27; + title].concat(headerCSS));else
+ logger.groupCollapsed(title);
+      } else {
+        if (colors.title &#x26;&#x26; isUsingDefaultFormatter) logger.group.apply(logger, [&#x27;%c &#x27; + title].concat(headerCSS));else logger.group
+(title);
+      }
+    } catch (e) {
+      logger.log(title);
+    }
+
+    var prevStateLevel = getLogLevel(level, formattedAction, [prevState], &#x27;prevState&#x27;);
+    var actionLevel = getLogLevel(level, formattedAction, [formattedAction], &#x27;action&#x27;);
+    var errorLevel = getLogLevel(level, formattedAction, [error, prevState], &#x27;error&#x27;);
+    var nextStateLevel = getLogLevel(level, formattedAction, [nextState], &#x27;nextState&#x27;);
+
+    if (prevStateLevel) {
+      if (colors.prevState) logger[prevStateLevel](&#x27;%c prev state&#x27;, &#x27;color: &#x27; + colors.prevState(prevState) + &#x27;; font-weight: bold
+&#x27;, prevState);else logger[prevStateLevel](&#x27;prev state&#x27;, prevState);
+    }
+
+    if (actionLevel) {
+      if (colors.action) logger[actionLevel](&#x27;%c action    &#x27;, &#x27;color: &#x27; + colors.action(formattedAction) + &#x27;; font-weight: bold&#x27;,
+formattedAction);else logger[actionLevel](&#x27;action    &#x27;, formattedAction);
+    }
+
+    if (error &#x26;&#x26; errorLevel) {
+      if (colors.error) logger[errorLevel](&#x27;%c error     &#x27;, &#x27;color: &#x27; + colors.error(error, prevState) + &#x27;; font-weight: bold;&#x27;,
+error);else logger[errorLevel](&#x27;error     &#x27;, error);
+    }
+
+    if (nextStateLevel) {
+      if (colors.nextState) logger[nextStateLevel](&#x27;%c next state&#x27;, &#x27;color: &#x27; + colors.nextState(nextState) + &#x27;; font-weight: bold
+&#x27;, nextState);else logger[nextStateLevel](&#x27;next state&#x27;, nextState);
+    }
+
+    if (diff) {
+      (0, _diff2.default)(prevState, nextState, logger, isCollapsed);
+    }
+
+    try {
+      logger.groupEnd();
+    } catch (e) {
+      logger.log(&#x27;\u2014\u2014 log end \u2014\u2014&#x27;);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-logger.defaults" id="apidoc.module.redux-logger.defaults">module redux-logger.defaults</a></h1>
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.actionTransformer" id="apidoc.element.redux-logger.defaults.actionTransformer">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.</span>actionTransformer
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function actionTransformer(action) {
+  return action;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.errorTransformer" id="apidoc.element.redux-logger.defaults.errorTransformer">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.</span>errorTransformer
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function errorTransformer(error) {
+  return error;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.stateTransformer" id="apidoc.element.redux-logger.defaults.stateTransformer">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.</span>stateTransformer
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stateTransformer(state) {
+  return state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-logger.defaults.colors" id="apidoc.module.redux-logger.defaults.colors">module redux-logger.defaults.colors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.colors.action" id="apidoc.element.redux-logger.defaults.colors.action">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>action
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function action() {
+  return &#x22;#03A9F4&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var nextStateLevel = getLogLevel(level, formattedAction, [nextState], &#x27;nextState&#x27;);
+
+if (prevStateLevel) {
+  if (colors.prevState) logger[prevStateLevel](&#x27;%c prev state&#x27;, &#x27;color: &#x27; + colors.prevState(prevState) + &#
+x27;; font-weight: bold&#x27;, prevState);else logger[prevStateLevel](&#x27;prev state&#x27;, prevState);
+}
+
+if (actionLevel) {
+  if (colors.action) logger[actionLevel](&#x27;%c action    &#x27;, &#x27;color: &#x27; + colors.<span class="apidocCodeKeywordSpan
+">action</span>(formattedAction) + &#x27;; font-weight: bold&#x27;, formattedAction);else logger[actionLevel](&#x27;action    &#
+x27;, formattedAction);
+}
+
+if (error &#x26;&#x26; errorLevel) {
+  if (colors.error) logger[errorLevel](&#x27;%c error     &#x27;, &#x27;color: &#x27; + colors.error(error, prevState) + &#x27;;
+font-weight: bold;&#x27;, error);else logger[errorLevel](&#x27;error     &#x27;, error);
+}
+
+if (nextStateLevel) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.colors.error" id="apidoc.element.redux-logger.defaults.colors.error">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error() {
+  return &#x22;#F20404&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (actionLevel) {
+  if (colors.action) logger[actionLevel](&#x27;%c action    &#x27;, &#x27;color: &#x27; + colors.action(formattedAction) + &#x27
+;; font-weight: bold&#x27;, formattedAction);else logger[actionLevel](&#x27;action    &#x27;, formattedAction);
+}
+
+if (error &#x26;&#x26; errorLevel) {
+  if (colors.error) logger[errorLevel](&#x27;%c error     &#x27;, &#x27;color: &#x27; + colors.<span class="apidocCodeKeywordSpan
+">error</span>(error, prevState) + &#x27;; font-weight: bold;&#x27;, error);else logger[errorLevel](&#x27;error     &#x27;, error
+);
+}
+
+if (nextStateLevel) {
+  if (colors.nextState) logger[nextStateLevel](&#x27;%c next state&#x27;, &#x27;color: &#x27; + colors.nextState(nextState) + &#
+x27;; font-weight: bold&#x27;, nextState);else logger[nextStateLevel](&#x27;next state&#x27;, nextState);
+}
+
+if (diff) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.colors.nextState" id="apidoc.element.redux-logger.defaults.colors.nextState">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>nextState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nextState() {
+  return &#x22;#4CAF50&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (error &#x26;&#x26; errorLevel) {
+  if (colors.error) logger[errorLevel](&#x27;%c error     &#x27;, &#x27;color: &#x27; + colors.error(error, prevState) + &#x27;;
+font-weight: bold;&#x27;, error);else logger[errorLevel](&#x27;error     &#x27;, error);
+}
+
+if (nextStateLevel) {
+  if (colors.nextState) logger[nextStateLevel](&#x27;%c next state&#x27;, &#x27;color: &#x27; + colors.<span class="apidocCodeKeywordSpan
+">nextState</span>(nextState) + &#x27;; font-weight: bold&#x27;, nextState);else logger[nextStateLevel](&#x27;next state&#x27;,
+nextState);
+}
+
+if (diff) {
+  (0, _diff2.default)(prevState, nextState, logger, isCollapsed);
+}
+
+try {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.colors.prevState" id="apidoc.element.redux-logger.defaults.colors.prevState">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>prevState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prevState() {
+  return &#x22;#9E9E9E&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var prevStateLevel = getLogLevel(level, formattedAction, [prevState], &#x27;prevState&#x27;);
+var actionLevel = getLogLevel(level, formattedAction, [formattedAction], &#x27;action&#x27;);
+var errorLevel = getLogLevel(level, formattedAction, [error, prevState], &#x27;error&#x27;);
+var nextStateLevel = getLogLevel(level, formattedAction, [nextState], &#x27;nextState&#x27;);
+
+if (prevStateLevel) {
+  if (colors.prevState) logger[prevStateLevel](&#x27;%c prev state&#x27;, &#x27;color: &#x27; + colors.<span class="apidocCodeKeywordSpan
+">prevState</span>(prevState) + &#x27;; font-weight: bold&#x27;, prevState);else logger[prevStateLevel](&#x27;prev state&#x27;,
+prevState);
+}
+
+if (actionLevel) {
+  if (colors.action) logger[actionLevel](&#x27;%c action    &#x27;, &#x27;color: &#x27; + colors.action(formattedAction) + &#x27
+;; font-weight: bold&#x27;, formattedAction);else logger[actionLevel](&#x27;action    &#x27;, formattedAction);
+}
+
+if (error &#x26;&#x26; errorLevel) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.defaults.colors.title" id="apidoc.element.redux-logger.defaults.colors.title">
+        function <span class="apidocSignatureSpan">redux-logger.defaults.colors.</span>title
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function title() {
+  return &#x22;inherit&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Message
+var formattedAction = actionTransformer(action);
+var isCollapsed = typeof collapsed === &#x27;function&#x27; ? collapsed(function () {
+  return nextState;
+}, action, logEntry) : collapsed;
+
+var formattedTime = (0, _helpers.formatTime)(startedTime);
+var titleCSS = colors.title ? &#x27;color: &#x27; + colors.<span class="apidocCodeKeywordSpan">title</span>(formattedAction) + &#
+x27;;&#x27; : &#x27;&#x27;;
+var headerCSS = [&#x27;color: gray; font-weight: lighter;&#x27;];
+headerCSS.push(titleCSS);
+if (options.timestamp) headerCSS.push(&#x27;color: gray; font-weight: lighter;&#x27;);
+if (options.duration) headerCSS.push(&#x27;color: gray; font-weight: lighter;&#x27;);
+var title = titleFormatter(formattedAction, formattedTime, took);
+
+// Render
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-logger.helpers" id="apidoc.module.redux-logger.helpers">module redux-logger.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.helpers.formatTime" id="apidoc.element.redux-logger.helpers.formatTime">
+        function <span class="apidocSignatureSpan">redux-logger.helpers.</span>formatTime
+        <span class="apidocSignatureSpan">(time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatTime(time) {
+  return pad(time.getHours(), 2) + &#x22;:&#x22; + pad(time.getMinutes(), 2) + &#x22;:&#x22; + pad(time.getSeconds(), 2) + &#x22;.&#x22; + pad(time.getMilliseconds
+(), 3);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.helpers.pad" id="apidoc.element.redux-logger.helpers.pad">
+        function <span class="apidocSignatureSpan">redux-logger.helpers.</span>pad
+        <span class="apidocSignatureSpan">(num, maxLength)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pad(num, maxLength) {
+  return repeat(&#x22;0&#x22;, maxLength - num.toString().length) + num;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.helpers.repeat" id="apidoc.element.redux-logger.helpers.repeat">
+        function <span class="apidocSignatureSpan">redux-logger.helpers.</span>repeat
+        <span class="apidocSignatureSpan">(str, times)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function repeat(str, times) {
+  return new Array(times + 1).join(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-logger.helpers.timer" id="apidoc.element.redux-logger.helpers.timer">
+        function <span class="apidocSignatureSpan">redux-logger.helpers.</span>timer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Date() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
